@@ -1,0 +1,67 @@
+---
+layout: layouts/FFWbase.njk
+title: Pizza Homemade
+linkCss: ../css/pizzaWeb.css
+Ofavicon: ../images/Ofavicon.png
+---
+<body>
+  <nav>
+    <div class="container">
+      <a href="/"><img src="../images/pizzaWebLogo.png" alt="" class="brand"></a>
+
+      <div class="collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Restaurant</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Menu</a>
+          </li><li class="nav-item">
+            <a href="#" class="nav-link">Booking</a>
+          </li><li class="nav-item">
+            <a href="#" class="nav-link">Photos</a>
+          </li><li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="policy">
+         <p>Pizza 2020 | Privacy Policy</p>
+      </div>
+    </div>
+  </nav>
+  <section class="header">
+        <img id="extra1" src="../images/extra1.png" alt="">
+        <img id="corner1" src="../images/corner1.png" alt="">
+        <img id="corner3" src="../images/corner3.png" alt="">
+  <div class="imageHolder">
+    <img src="../images/pizza1.jpg" alt="" class="mySlides">
+    <img src="../images/pizza2.jpg" alt="" class="mySlides">
+    <img src="../images/pizza3.jpg" alt="" class="mySlides">
+  </div>
+  </section>
+
+  <script>
+  var slideIndex=0;
+	showSlides();
+	function showSlides() {
+
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  for(i=0; i<slides.length; i++) {
+	     slides[i].style.opacity = "0";
+	  }
+	  slideIndex++;
+	  if(slideIndex > slides.length) {slideIndex=1}
+	  slides[slideIndex-1].style.opacity = "0.8";
+	  setTimeout(showSlides, 4000);
+
+	  }
+
+  </script>
+
+</body>
+</html>
