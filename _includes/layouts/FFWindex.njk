@@ -1,0 +1,127 @@
+---
+layout: layouts/FFWbase.njk
+---
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="" class="navbar-brand">oanh</a>
+      <button class="menu" onclick="toggle()"><span>Menu</span></button>
+
+
+      <div class="collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1 class="vr">Oanh</h1>
+
+    <div class="d-flex">
+      <div class="half order-last">
+        <img src="./images/oanh1.JPG" class="mySlides" />
+        <img src="./images/oanh2.JPG" class="mySlides" />
+      </div>
+      <div class="half"></div>
+    </div>
+
+
+
+  </section>
+  <!--intro-->
+
+{{ content | safe }}
+
+<footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 >About Us</h2>
+          <p>Far far away, behind the word mountains, <br>
+            far from the countries Vokalia and Consonantia, <br>there live the blind texts.</p>
+
+        </div>
+        <div class="col">
+          <h2 class="ftco-heading-2">Information</h2>
+          <ul>
+          <li><a href="#" class="py-2 d-block">Portfolio</a></li>
+          <li><a href="#" class="py-2 d-block">Privacy</a></li>
+          <li><a href="#" class="py-2 d-block">Terms Condition</a></li>
+          </ul>
+
+        </div>
+        <div class="col">
+          <h2 >Links</h2>
+          <ul>
+            <li><a href="#" class="py-2 d-block">Home</a></li>
+            <li><a href="#" class="py-2 d-block">About</a></li>
+            <li><a href="#" class="py-2 d-block">Work</a></li>
+            <li><a href="#" class="py-2 d-block">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Have a Questions?</h2>
+          <div class="block-23 mb-3">
+          <ul>
+          <li><span class="icon icon-map-marker"></span><span class="text">217/90 Bui Dinh Tuy F24 BT</span></li>
+          <li><a href="#"><span class="icon icon-phone"></span><span class="text">+84 853 833 045</span></a></li>
+          <li><a href="#"><span class="icon icon-envelope"></span><span class="text">thuyoanh21790@gmail.com</span></a></li>
+          </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+  <!--end portfolio-->
+  <style>
+
+
+
+
+
+
+  </style>
+  <script>
+
+    var slideIndex=0;
+	showSlides();
+	function showSlides() {
+
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  for(i=0; i<slides.length; i++) {
+	     slides[i].style.opacity = "0";
+	  }
+	  slideIndex++;
+	  if(slideIndex > slides.length) {slideIndex=1}
+	  slides[slideIndex-1].style.opacity = "0.8";
+	  setTimeout(showSlides, 4000);
+
+	  }
+  function toggle() {
+    var nav = document.querySelector('nav');
+    nav.classList.toggle('active');
+  }
+  window.addEventListener("scroll", function(){
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("sticky", window.scrollY>0);
+  })
+
+  </script>
+</body>
+</html>

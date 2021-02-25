@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Freelance for Website</title>
+  <link rel="stylesheet" href="./css/design.css">
+  <link rel="icon" type="image/png" href="./images/Ofavicon.png"/>
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:900&amp;display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="" class="navbar-brand">oanh</a>
+      <button class="menu" onclick="toggle()"><span>Menu</span></button>
+
+
+      <div class="collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1 class="vr">Oanh</h1>
+
+    <div class="d-flex">
+      <div class="half order-last">
+        <img src="./images/oanh1.JPG" class="mySlides" />
+        <img src="./images/oanh2.JPG" class="mySlides" />
+      </div>
+      <div class="half"></div>
+    </div>
+
+
+
+  </section>
+  <!--intro-->
+  <section class="intro">
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="col-md-8">
+        <h2>Web <span>Designer</span>, hobbyist writer, and the CEO &amp; Founder of <span>Oanh</span></h2>
+        <p>Far far away, behind the word mountains,
+          far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in
+          Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+
+      </div>
+    </div>
+
+
+  </div>
+
+  </section>
+  <!--end intro-->
+
+  <!--portfolio-->
+  <section class="portfolio">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="heading-section">
+            <h2 class="mb-5">Latest &amp; <span>Greatest</span></h2>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 >About Us</h2>
+          <p>Far far away, behind the word mountains, <br>
+            far from the countries Vokalia and Consonantia, <br>there live the blind texts.</p>
+
+        </div>
+        <div class="col">
+          <h2 class="ftco-heading-2">Information</h2>
+          <ul>
+          <li><a href="#" class="py-2 d-block">Portfolio</a></li>
+          <li><a href="#" class="py-2 d-block">Privacy</a></li>
+          <li><a href="#" class="py-2 d-block">Terms Condition</a></li>
+          </ul>
+
+        </div>
+        <div class="col">
+          <h2 >Links</h2>
+          <ul>
+            <li><a href="#" class="py-2 d-block">Home</a></li>
+            <li><a href="#" class="py-2 d-block">About</a></li>
+            <li><a href="#" class="py-2 d-block">Work</a></li>
+            <li><a href="#" class="py-2 d-block">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Have a Questions?</h2>
+          <div class="block-23 mb-3">
+          <ul>
+          <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+          <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+          <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+          </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+  <!--end portfolio-->
+  <style>
+
+
+
+
+
+
+  </style>
+  <script>
+
+    var slideIndex=0;
+	showSlides();
+	function showSlides() {
+
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  for(i=0; i<slides.length; i++) {
+	     slides[i].style.opacity = "0";
+	  }
+	  slideIndex++;
+	  if(slideIndex > slides.length) {slideIndex=1}
+	  slides[slideIndex-1].style.opacity = "0.7";
+	  setTimeout(showSlides, 3000);
+
+	  }
+  function toggle() {
+    var nav = document.querySelector('nav');
+    nav.classList.toggle('active');
+  }
+
+  window.addEventListener(
+  </script>
+</body>
+</html>
+
