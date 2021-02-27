@@ -1,0 +1,39 @@
+---
+pagination:
+  data: collections.all
+  size: 5
+layout: layouts/home.njk
+permalink: /pageLists/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}
+---
+<div aria-labelledby="my-pagination">
+  <h2 id="my-pagination">This is my Pagination</h2>
+  <ol>
+    <li>
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}">Previous</a>
+      {% else %}
+        Previous
+      {% endif %}
+    </li>
+    {%- for page in pagination.pages %}
+    <li>
+      <a href="{{ pagination.hrefs[ loop.index0 ] }}"
+        >Page {{ loop.index }}
+      </a>
+    </li>
+    {%- endfor %}
+    <li>
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}">Next</a>
+      {% else %}
+        Next
+      {% endif %}
+    </li>
+  </ol>
+</div>
+
+
+<h1>item</h1>
+{%- for item in pagination.items %}
+  <p>{{item.url}}</p>
+{% endfor -%}

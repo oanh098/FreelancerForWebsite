@@ -381,3 +381,33 @@ img.mySlides{
       color: rgba(255,255,255,.8);
     }
     /*end footer */
+
+/*navigation*/
+div#navigation {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+div#navigation ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div#navigation ul li
+{
+
+  display: block;
+  padding: 25px 0;
+
+  list-style: none;
+}
+div#navigation ul li a{
+    min-width: 25px;
+     padding: 10px;
+
+}
+div#navigation ul li a:hover{
+  background: rgba(0,0,0,.3);
+  color: rgba(255,255,255,.9);
+}
+/*end navigation*/

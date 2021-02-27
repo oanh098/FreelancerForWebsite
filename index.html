@@ -1,9 +1,44 @@
 ---
 layout: layouts/FFWindex.njk
 title: Freelancer for Website
-linkCss: ./css/design.css
-Ofavicon: ./images/Ofavicon.png
+linkCss: ../css/design.css
+Ofavicon: ../images/Ofavicon.png
+pagination:
+  data: collections.template
+  size: 2
 ---
+<!--<div aria-labelledby="my-pagination">
+  <h2 id="my-pagination">This is my Pagination</h2>
+  <ol>
+    <li>
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}">Previous</a>
+      {% else %}
+        Previous
+      {% endif %}
+    </li>
+    {%- for page in pagination.pages %}
+    <li>
+      <a href="{{ pagination.hrefs[ loop.index0 ] }}"
+        >Page {{ loop.index }}
+      </a>
+    </li>
+    {%- endfor %}
+    <li>
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}">Next</a>
+      {% else %}
+        Next
+      {% endif %}
+    </li>
+  </ol>
+</div>
+
+{%- for item in pagination.items %}
+  <p>{{item.url}} - {{item.data.title}} - {{item.data.linkCss}}</p>
+{% endfor -%}-->
+
+
 
   <!--intro-->
   <section class="intro padding-top-bottom">
@@ -35,56 +70,53 @@ Ofavicon: ./images/Ofavicon.png
       </div>
     </div></section>
 
+
+{%- for tmp in pagination.items -%}
+
   <section class="padding-top-bottom">
     <div class="container-fluid">
       <div class="sgWeb">
           <div class="desc">
             <div class="text">
-              <span class="subHeading">Website { 2021 Feb 24 }</span>
-              <h2><a href="/sgWeb/index.html">Saigon NightLife</a></h2>
+              <span class="subHeading">Website { {{ tmp.data.dateCreated }} }</span>
+              <h2><a href="{{ tmp.url }}">{{ tmp.data.title }}</a></h2>
             </div>
 
           </div>
 
-          <img src="./images/sgWeb.png" alt="">
+          <img src="{{ tmp.data.coverImage }}" alt="">
 
       </div>
 
     </div>
   </section>
+{%- endfor -%}
 
- <section class="padding-top-bottom">
-    <div class="container-fluid">
-      <div class="sgWeb">
-          <div class="desc">
-            <div class="text">
-              <span class="subHeading">Website { 2021 Feb 25 }</span>
-              <h2><a href="/pizzaWeb/index.html">Pizza Homemade</a></h2>
-            </div>
+<div id="navigation" aria-labelledby="my-pagination">
+  <h2 id="my-pagination"></h2>
+  <ul>
+    <li>
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}">Previous</a>
+      {% else %}
+        Previous
+      {% endif %}
+    </li>
+    {%- for page in pagination.pages %}
+    <li>
+      <a href="{{ pagination.hrefs[ loop.index0 ] }}"
+        >{{ loop.index }}
+      </a>
+    </li>
+    {%- endfor %}
+    <li>
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}">Next</a>
+      {% else %}
+        Next
+      {% endif %}
+    </li>
+  </ul>
+</div>
 
-          </div>
 
-          <img src="./images/pizzaWeb.png" alt="">
-
-      </div>
-
-    </div>
-  </section>
-
-<section class="padding-top-bottom">
-    <div class="container-fluid">
-      <div class="sgWeb">
-          <div class="desc">
-            <div class="text">
-              <span class="subHeading">Website { 2021 Feb 25 }</span>
-              <h2><a href="/DulichWeb/index.html">Travel Non-Stop</a></h2>
-            </div>
-
-          </div>
-
-          <img src="./images/DulichWeb.png" alt="">
-
-      </div>
-
-    </div>
-  </section>
