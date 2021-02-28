@@ -1,0 +1,76 @@
+---
+layout: layouts/FFWbase.njk
+title: Adidas Presentation
+linkCss: ../../css/adidasWeb.css
+Ofavicon: ../../images/Ofavicon.png
+coverImage: ../../images/AdidasWeb.png
+dateCreated: 2021 Feb 28
+tags: template
+---
+<body>
+<header>
+      <h2 class="logo"><a href="/"><img src="../../images/oanh-transbg-cut.png" alt=""></a></h2>
+      <div class="toggle"></div>
+    </header>
+<div class="adidasContainer">
+  <div class="card">
+    <div class="sneaker">
+      <div class="circle"></div>
+      <img src="../../images/adidas.png" alt="">
+    </div>
+     <div class="info">
+        <h1 class="title">Adidas ZX</h1>
+        <h3>FUTURE-READY TRAINER WITH WRAPPED BOOST FOR EXCEPTION COMFORT.</h3>
+        <div class="sizes">
+          <button>39</button>
+          <button>40</button>
+          <button class="active">42</button>
+          <button>44</button>
+        </div>
+        <div class="purchase">
+          <button>Purchase</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+<script>
+
+const card = document.querySelector(".card");
+const container = document.querySelector(".adidasContainer");
+<!--Items-->
+const title = document.querySelector(".title");
+const sneaker = document.querySelector(".sneaker img");
+const purchase = document.querySelector(".purchase");
+const description = document.querySelector(".info h3");
+const sizes = document.querySelector(".sizes");
+
+container.addEventListener("mousemove", (e) => {
+  console.log(e.pageX, e.pageY);
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 10;
+  let yAxis = (window.innerHeight / 2 - e.pageY) / 10;
+  card.style.transform =`rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
+});
+<!--Animate In-->
+container.addEventListener('mouseenter', e => {
+  card.style.transition = "none";
+  <!--Popout-->
+  title.style.transform ="translateZ(150px)";
+  sneaker.style.transform ="translateZ(200px) rotateZ(-45deg)";
+  description.style.transform ="translateZ(125px)";
+  purchase.style.transform ="translateZ(75px)";
+  sizes.style.transform ="translateZ(100px)";
+});
+<!--Animate Out -->
+container.addEventListener("mouseleave", (e) => {
+    card.style.transition = "all 0.5s ease";
+    card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    title.style.transform ="translateZ(0)";
+    sneaker.style.transform ="translateZ(0)";
+    description.style.transform ="translateZ(0)";
+    purchase.style.transform ="translateZ(0)";
+    sizes.style.transform ="translateZ(0)";
+});
+</script>
+</body>
+</html>
