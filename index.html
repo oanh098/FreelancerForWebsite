@@ -1,45 +1,12 @@
 ---
 layout: layouts/FFWindex.njk
 title: Freelancer for Website
-linkCss: ../css/design.css
-Ofavicon: ../images/Ofavicon.png
+linkCss: ../css/index.css
+Ofavicon: ./images/Ofavicon.png
 pagination:
   data: collections.template
   size: 2
 ---
-<!--<div aria-labelledby="my-pagination">
-  <h2 id="my-pagination">This is my Pagination</h2>
-  <ol>
-    <li>
-      {% if pagination.href.previous %}
-        <a href="{{ pagination.href.previous }}">Previous</a>
-      {% else %}
-        Previous
-      {% endif %}
-    </li>
-    {%- for page in pagination.pages %}
-    <li>
-      <a href="{{ pagination.hrefs[ loop.index0 ] }}"
-        >Page {{ loop.index }}
-      </a>
-    </li>
-    {%- endfor %}
-    <li>
-      {% if pagination.href.next %}
-      <a href="{{ pagination.href.next }}">Next</a>
-      {% else %}
-        Next
-      {% endif %}
-    </li>
-  </ol>
-</div>
-
-{%- for item in pagination.items %}
-  <p>{{item.url}} - {{item.data.title}} - {{item.data.linkCss}}</p>
-{% endfor -%}-->
-
-
-
   <!--intro-->
   <section class="intro padding-top-bottom">
   <div class="container">
@@ -70,6 +37,11 @@ pagination:
       </div>
     </div></section>
 
+<!--<h1>Tags</h1>
+{% for tag in collections.tagList %}
+  {% set tagUrl %}/index/{{ tag }}/{% endset %}
+  <a href="{{ tagUrl | url }}"> {{tag}}</a>
+{% endfor %}-->
 
 {%- for tmp in pagination.items -%}
 
@@ -78,7 +50,9 @@ pagination:
       <div class="sgWeb">
           <div class="desc">
             <div class="text">
-              <span class="subHeading">Website { {{ tmp.data.dateCreated }} }</span>
+              <span class="subHeading">Website { {{ tmp.data.dateCreated }} }
+
+              </span>
               <h2><a href="{{ tmp.url }}">{{ tmp.data.title }}</a></h2>
             </div>
 

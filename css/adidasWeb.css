@@ -12,16 +12,13 @@ body {
   justify-content: center;
   perspective: 1000px;
 }
-.adidasContainer {
-  width: 100%;
+.container {
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: khaki;
-
 }
-
-
 header .logo
 {
   color: #fff;
@@ -65,6 +62,7 @@ header .logo
   border-radius: 50%;
   z-index: 1;
 }
+
 .info h1{
   font-size: 3rem;
   transition: all 0.75s ease-out;
@@ -108,4 +106,14 @@ button.active {
   cursor: pointer;
   border-radius: 30px;
   font-weight: bolder;
+}
+
+/* responsive css */
+@media (max-width: 991px)
+{
+  .container
+  {
+    width: 100%;
+  }
+
 }

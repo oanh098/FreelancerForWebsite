@@ -3,7 +3,7 @@ layout: layouts/FFWbase.njk
 title: Saigon NightLife
 linkCss: ../../css/sgWeb.css
 Ofavicon: ../../images/Ofavicon.png
-coverImage: ../../images/sgWeb.png
+coverImage: ../images/sgWeb.png
 dateCreated: 2021 Feb 24
 tags: template
 ---
@@ -11,6 +11,9 @@ tags: template
     <a href="/" class="logo">
       <img src="../../images/oanh-transbg-cut.png" alt="">
     </a>
+    <div class="closeMenu" onclick="toggleMenu()">
+       <i class="fa fa-bars"></i>
+      </div>
     <ul class="navigation">
       <li><a href="#">Home</a></li>
       <li><a href="#">TV Shows</a></li>
@@ -26,7 +29,7 @@ tags: template
   <div class="banner">
     <img class="bg" src="../../images/saigon.jpg" alt="">
     <div class="content">
-      <img src="..././images/sgText.png" alt="" class="movieTitle">
+      <img src="../../images/sgText.png" alt="" class="movieTitle">
       <h4>
         <span>2021</span>
         <span>21+</span>
@@ -49,7 +52,9 @@ tags: template
   <div class="trailer">
     <video src="../../images/sgWeb.mp4" controls="true" autoplay="true"></video>
     <img src="../../images/close.png" class="close" onclick="toggleVideo()" alt="">
+
   </div>
+
 
 <script>
 
@@ -60,5 +65,10 @@ tags: template
       video.currentTime=0;
       video.pause();
     }
+    function toggleMenu() {
+      const toggleMenu = document.querySelector('.navigation');
+      toggleMenu.classList.toggle('active');
+    }
+
 </script>
 
