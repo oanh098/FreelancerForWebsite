@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/oanhWeb.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:900&amp;display=swap" rel="stylesheet">
+
+  <title>oanhWeb</title>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="brand"><a href="/"><img src="./images/oanh-transbg-cut.png" alt=""></a></div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="imgContainer">
+    <img src="./images/oanhWeb/oanh1.JPG" class="mySlides" alt="">
+    <img src="./images/oanhWeb/oanh2.JPG" class="mySlides" alt="">
+  </div>
+  <div class="right"></div>
+  <div class="hero"><h1>Oanh</h1></div>
+</header>
+<footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 >About Us</h2>
+          <p>Far far away, behind the word mountains, <br>
+            far from the countries Vokalia and Consonantia, <br>there live the blind texts.</p>
+
+        </div>
+        <div class="col">
+          <h2 >Information</h2>
+          <ul>
+          <li><a href="#" >Portfolio</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#" >Terms Condition</a></li>
+          </ul>
+
+        </div>
+        <div class="col">
+          <h2 >Links</h2>
+          <ul>
+            <li><a href="#" class="py-2 d-block">Home</a></li>
+            <li><a href="#" class="py-2 d-block">About</a></li>
+            <li><a href="#" class="py-2 d-block">Work</a></li>
+            <li><a href="#" class="py-2 d-block">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 >Have a Questions?</h2>
+          <ul>
+            <li>217/90 Bui Dinh Tuy F24 BT</li>
+            <li>+84 853 833 045</li>
+            <li>thuyoanh21790@gmail.com</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+<script>
+
+  var slideIndex=0;
+	showSlides();
+	function showSlides() {
+
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  for(i=0; i<slides.length; i++) {
+	     slides[i].style.opacity = "0";
+	  }
+	  slideIndex++;
+	  if(slideIndex > slides.length) {slideIndex=1}
+	  slides[slideIndex-1].style.opacity = "1";
+	  setTimeout(showSlides, 2000);
+	  }
+
+	  window.addEventListener("scroll", function(){
+      var nav = document.querySelector("nav");
+      nav.classList.toggle("sticky", window.scrollY>0);
+    })
+</script>
+</body>
+</html>

@@ -1,49 +1,28 @@
 ---
 layout: layouts/FFWbase.njk
 ---
-
+<header>
   <nav>
-    <div class="container">
-      <a href="" class="navbar-brand">oanh</a>
-      <div class="menu" onclick="toggle()"><i class="fa fa-bars"></i></div>
-
-
-      <div class="collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Work</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <div class="brand"><a href="/"><img src="../images/oanh-transbg-cut.png" alt=""></a></div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
   </nav>
-
-  <section class="hero">
-    <h1 class="vr">Oanh</h1>
-
-    <div class="d-flex">
-      <div class="half order-last">
-        <img src="../images/oanh1.JPG" class="mySlides" />
-        <img src="../images/oanh2.JPG" class="mySlides" />
-      </div>
-      <div class="half"></div>
-    </div>
-
-
-
-  </section>
+  <div class="imgContainer">
+    <img src="../images/oanhWeb/oanh1.JPG" class="mySlides" alt="">
+    <img src="../images/oanhWeb/oanh2.JPG" class="mySlides" alt="">
+  </div>
+  <div class="right"></div>
+  <div class="hero"><h1>Oanh</h1></div>
+</header>
   <!--intro-->
 
 {{ content | safe }}
 
 <footer class="footer-section">
-    <div class="container">
+    <div class="containerFooter">
       <div class="row">
         <div class="col">
           <h2 >About Us</h2>
@@ -52,11 +31,11 @@ layout: layouts/FFWbase.njk
 
         </div>
         <div class="col">
-          <h2 class="ftco-heading-2">Information</h2>
+          <h2 >Information</h2>
           <ul>
-          <li><a href="#" class="py-2 d-block">Portfolio</a></li>
-          <li><a href="#" class="py-2 d-block">Privacy</a></li>
-          <li><a href="#" class="py-2 d-block">Terms Condition</a></li>
+          <li><a href="#" >Portfolio</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#" >Terms Condition</a></li>
           </ul>
 
         </div>
@@ -70,15 +49,12 @@ layout: layouts/FFWbase.njk
           </ul>
         </div>
         <div class="col">
-          <div class="ftco-footer-widget mb-4">
-          <h2 class="ftco-heading-2">Have a Questions?</h2>
-          <div class="block-23 mb-3">
+          <h2 >Have a Questions?</h2>
           <ul>
-          <li><span class="icon icon-map-marker"></span><span class="text">217/90 Bui Dinh Tuy F24 BT</span></li>
-          <li><a href="#"><span class="icon icon-phone"></span><span class="text">+84 853 833 045</span></a></li>
-          <li><a href="#"><span class="icon icon-envelope"></span><span class="text">thuyoanh21790@gmail.com</span></a></li>
+            <li>217/90 Bui Dinh Tuy F24 BT</li>
+            <li>+84 853 833 045</li>
+            <li>thuyoanh21790@gmail.com</li>
           </ul>
-          </div>
           </div>
         </div>
       </div>
