@@ -1,0 +1,72 @@
+---
+layout: layouts/FFWbase.njk
+title: Animation Dreamer
+linkCss: ../../css/animationDream.css
+Ofavicon: ../../images/Ofavicon.png
+coverImage: ../images/animationDream/animationDream.png
+dateCreated: 2021 Mar 4
+tags: template
+---
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <div class="brand"><a href="/"><img src="../../images/oanh-transbg-cut.png" alt=""></a></div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+    </nav>
+    <section>
+      <div class="hero">
+        <!--<div class="images">-->
+        <div class="both">
+        <div class="vapour">
+          <span style="--i:1;"></span>
+           <span style="--i:16;"></span>
+          <span style="--i:3;"></span>
+          <span style="--i:4;"></span>
+          <span style="--i:14;"></span>
+          <span style="--i:12;"></span>
+          <span style="--i:11;"></span>
+         <span style="--i:5;"></span>
+          <span style="--i:7;"></span>
+          <span style="--i:2;"></span>
+          <span style="--i:8;"></span>
+        </div>
+           <img id="dreamGirl" src="../../images/animationDream/animationDream.webp" alt="">
+        </div>
+       <!-- <img id="man" src="./images/animationDream/man.jpg" alt="">-->
+       <!-- </div>-->
+
+
+        <!--<div class="clouds">
+          <img src="./images/animationDream/cloud1.png" style="&#45;&#45;i:1;" alt="">
+          <img src="./images/animationDream/cloud2.png" style="&#45;&#45;i:2;" alt="">
+          <img src="./images/animationDream/cloud3.png" style="&#45;&#45;i:3;" alt="">
+          <img src="./images/animationDream/cloud4.png" style="&#45;&#45;i:4;" alt="">
+          <img src="./images/animationDream/cloud5.png" style="&#45;&#45;i:5;" alt="">
+        </div>-->
+
+      </div>
+      <h1 class="headline">Dreamer,</h1>
+    </section>
+  </header>
+
+
+   <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+  ></script>
+  <script>
+      const dreamGirl = document.querySelector('#dreamGirl');
+
+      const tl = gsap.timeline();
+      tl.fromTo("#bg",{ width: "100%", }, { duration: 2,   width: "150%" })
+
+
+  </script>
+</body>
+</html>
